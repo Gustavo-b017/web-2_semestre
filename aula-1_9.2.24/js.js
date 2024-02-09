@@ -46,10 +46,28 @@ function calculo(){
     let imc = kg / (metros**2)
 
     const resul = document.querySelector('#h1')
+    const re_peso = document.querySelector('#h2')
+    const re_peso1 = document.querySelector('#h3')
+    const re_peso2 = document.querySelector('#h4')
+    const re_peso3 = document.querySelector('#h5')
 
     resul.innerHTML = "<h1> o resultado e:"+imc+"</h1>"
-
+    
     console.log(resul)
-    return imc
-}
+    
+    if (imc < 18.5){
+        re_peso.innerHTML = "<h2> o seu peso e: Baixo</h2>"
+    }
+    
+    else if ( 18.5 < imc < 25){
+        re_peso1.innerHTML = "<h2> o seu peso e: normal</h2>"
+    }
+    
+    else if ( 25 < imc < 30 ){
+        re_peso2.innerHTML = "<h2> o seu peso e: sobrepeso</h2>"
+    }
 
+    else {
+        re_peso3.innerHTML = "<h2> o seu peso e: obeso</h2>"
+    }
+}
