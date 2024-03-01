@@ -32,16 +32,15 @@ window.onload = () => {
     for(let i=0; i< filmes.length; i++){
         let lista = document.createElement('li') // cria um elemento
         listaFilmes.append(lista)
-        lista.innerHTML = filmes[i].nome
-
-
-        // let listaAno = document.createElement('li') // cria um elemento
-        // listaFilmes.append(listaAno) // adiciona as coisas em uma lista ja criada
-        // listaAno.innerHTML = filmes[i].lancamento // pega os dados especificos
+        lista.inAno.innerHTML = filmes[i].lancamento // pega os dados especificos
 
         let listaAno = document.createElement('li') // cria um elemento
         lista.append(listaAno) // adiciona as coisas em uma lista ja criada
         listaAno.innerHTML = `o ano de lancameno é: ${filmes[i].lancamento}` // pega os dados especificos
-
     }
 } // fucao igual a anterior, so que menor
+
+
+// filmes.forEach((meuElemento) =>{
+//      console.log(meuElemento.nome + 'vai bb')
+// })
